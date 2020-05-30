@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PoemListPage from './PoemListPage'
 import './App.css';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -13,14 +14,16 @@ class App extends Component {
           <h1>William Setstatespear</h1>
         </header>
         <main>
-          <PoemListPage />
-        </main>
-        <footer>
-          <p>© WilliamSetstatespear, 2018. All Rights Reserved.</p>
-        </footer>
-      </div>
-    );
-  }
-}
-
-export default App;
+          <Route 
+            exact path='/'
+            component={PoemListPage}/>
+                    </main>
+                    <footer>
+                      <p>© WilliamSetstatespear, 2018. All Rights Reserved.</p>
+                    </footer>
+                  </div>
+                );
+              }
+            }
+            
+            export default App;
